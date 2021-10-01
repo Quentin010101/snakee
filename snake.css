@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    height: 50vw;
+    width: 50vw;
+    border: solid;
+}
+
+.snakePart{
+    background-color: aquamarine;
+    border: solid;
+    z-index: 1;
+}
+.food{
+    background-color: red;
+}
