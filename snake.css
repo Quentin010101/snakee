@@ -9,22 +9,98 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(45deg, rgb(53, 52, 52) ,rgb(24, 23, 23));
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
-    height: 50vw;
+    height: 45vw;
     width: 50vw;
-    border: solid;
+    border-radius: 2%;
+    border: solid 5px black;
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: 0.5em 0.5em 0.5em black;
 }
+.gameover{
 
-.snakePart{
-    background-color: aquamarine;
-    border: solid;
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/ 1 / 21 /21;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: font-size 2s;
     z-index: 1;
+    color:rgb(214, 210, 210);
+    text-shadow: 0.05em 0.05em black;
+    text-align: center;
+}
+.circle{
+    position: absolute;
+    height: 1px;
+    width : 1px;
+    border-radius: 50%;
+    border: 1vw yellow solid;
+    /* transform: translateX(-39%) translateY(-39%); */
+    z-index: 2;
+}
+h1{
+    font-size: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(16, 80, 29);
+    text-shadow: 0.08em 0.05em rgb(19, 17, 17);
+}
+.score{
+    height: 5vw;
+    width: 10vw;
+    margin-right: 1vw;
+    border-radius: 2%;
+    border: solid 5px black;
+    box-shadow: 0.5em 0.5em 0.5em black;
+    background-color: rgb(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.scoreR{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.score span:first-child{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0.05em 0.05em rgb(161, 154, 154);
+}
+.snakePart{
+    background-color: rgb(23, 109, 41);
+    border: solid 2px rgb(36, 36, 36);
+    border-radius: 20%;
+    z-index: 1;
+    box-shadow: -0.08em 0.08em 0.1em black;
 }
 .food{
     background-color: red;
+    height:75%;
+    width: 75%;
+    border-radius: 45%;
+    align-self: flex-end;
+    margin-bottom: 5%;
+    justify-self: center;
+    position: relative;
+    border: solid rgb(71, 0, 0) 1px;
+    box-shadow: -0.05em 0.05em 0.1em black;
+}
+.food::before{
+    content:'';
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    left: 50%;
+    top: -15%;
+    transform: translateX(-50%);
+    background: rgb(68, 16, 16);
 }
